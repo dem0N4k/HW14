@@ -8,7 +8,12 @@ public class Main {
     }
 
     public static double avg(int num) {
-        //todo Дописать логику работы метода сюда. Метод main не трогаем!!!
-        return 0; //todo заменить 0 на корректный результат.
+        String numString = String.valueOf(num); // переводим число в строку
+        double sum = 0;
+        for (int i = 0; i < numString.length(); i++) {
+            sum = sum + Integer.parseInt(String.valueOf(numString.charAt(i))); // находим сумму каждого числа
+        }
+
+        return sum / numString.length(); // считаем среднеарифметическую
     }
 }
